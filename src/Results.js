@@ -127,7 +127,9 @@ class Results extends Component {
           .map(croissant => (
             <div>
               <h1>
-                {croissant.bakery} ({croissant.price.toFixed(0)},- kr)
+                {croissant.index} - {croissant.bakery} ({this.state.averagesPerCroissant[
+                  croissant.id
+                ].total.toFixed(2)})
               </h1>
               {this.state.showDrillDown && (
                 <div>
